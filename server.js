@@ -52,6 +52,13 @@ app.get("/about", (req, res)=>{
   })
 })
 
+app.get("/projects", (req, res)=>{
+  res.render("projects.hbs", {
+    pageTitle: "projects page ",
+    message : "here are your Project of you have none then what are you waiting for ? make one"
+  })
+})
+
 app.get("/bad", (req, res)=>{
   res.send({
     errorMessage : "Unable to fulfill the data"
