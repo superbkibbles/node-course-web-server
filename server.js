@@ -2,6 +2,7 @@ const express = require("express")
 const hbs = require("hbs")
 const fs = require("fs")
 var app = express()
+const port = process.env.PORT || 3000;
 
 app.set("view engine", "hbs")
 hbs.registerPartials(__dirname + "/views/partials")
@@ -57,6 +58,6 @@ app.get("/bad", (req, res)=>{
   })
 })
 
-app.listen(3000, function(){
-  console.log("connected")
+app.listen(port, function(){
+  console.log(  `connected ${port}`)
 })
